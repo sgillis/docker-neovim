@@ -54,6 +54,9 @@ set cursorline
 " Highlight search term
 set hlsearch
 
+" Hidden buffers
+set hidden
+
 " Turn off tab expanding when working in a Makefile
 :autocmd BufNewFile,BufRead [Mm]akefile* setl noexpandtab tabstop=8
 
