@@ -67,6 +67,7 @@ let mapleader = ","
 map gt :bnext<CR>
 map gr :bprev<CR>
 map <leader>q :bd<CR>
+map <leader>b :CtrlPBuffer<CR>
 
 " Deselect highlighted
 map <leader><CR> :noh<CR>
