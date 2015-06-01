@@ -9,6 +9,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/Align'
+Plug 'bitc/vim-hdevtools'
 call plug#end()
 """
 
