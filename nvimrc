@@ -9,7 +9,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/Align'
+Plug 'terryma/vim-expand-region'
 Plug 'bitc/vim-hdevtools'
+Plug 'lambdatoast/elm.vim'
 call plug#end()
 """
 
@@ -26,6 +28,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['python', 'pylint']
 
 " Don't load default Align plugin mappings
 let g:loaded_AlignMapsPlugin=1
@@ -80,4 +83,11 @@ map <leader>8 :SyntasticToggle<CR>
 
 " Align
 map <leader>ap :Align
-"""
+
+" Hdevtools
+map <leader>ht :HdevtoolsType<CR>
+map <leader>hc :HdevtoolsClear<CR>
+
+" vim-expand-region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)

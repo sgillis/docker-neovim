@@ -1,0 +1,9 @@
+#! /bin/bash
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+echo $DIR
+RUNNING=`docker ps -q -f status=running -f name=pylint | wc -l`
+
+if [ $RUNNING -eq 1 ]; then
+    docker exec pylint pylint --rcfile=/root/.pylintrc "$@"
+fi
